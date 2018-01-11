@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 group :development, :test do
   gem 'rake'
-  gem 'mongoid', '2.6.0'
+  gem 'mongoid'
   gem 'bson_ext', platforms: :ruby
   gem 'geoip'
   gem 'rubyzip'
@@ -31,14 +31,14 @@ group :test do
   gem 'webmock'
 
   platforms :ruby do
-    gem 'pg', '~> 0.11'
+    gem 'pg', '~> 0.18'
     gem 'mysql2', '~> 0.3.11'
   end
 
   platforms :jruby do
     gem 'jdbc-mysql'
     gem 'jdbc-sqlite3'
-    gem 'activerecord-jdbcpostgresql-adapter', '~> 1.3.0'
+    gem 'activerecord-jdbcpostgresql-adapter'
   end
 end
 
